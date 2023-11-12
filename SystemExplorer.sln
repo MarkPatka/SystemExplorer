@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesktopUI", "DesktopUI", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Explorer.Shared.ViewModels", "src\SystemExplorer.Core\Explorer.Shared.ViewModels\Explorer.Shared.ViewModels.csproj", "{9832DAA7-8922-4789-AD9C-9E7819561E3E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemExplorer.Avalonia.UI", "src\SystemExplorer.Desktop\SystemExplorer.Avalonia.UI\SystemExplorer.Avalonia.UI.csproj", "{036520F0-E1E3-404C-B58E-BDD325CFA283}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemExplorer.Desktop.UI", "src\SystemExplorer.Desktop\SystemExplorer.Avalonia.UI\SystemExplorer.Desktop.UI\SystemExplorer.Desktop.UI.csproj", "{2699C5AC-B8FD-4718-AAD6-31D86B48DF38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,17 +21,17 @@ Global
 		{9832DAA7-8922-4789-AD9C-9E7819561E3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9832DAA7-8922-4789-AD9C-9E7819561E3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9832DAA7-8922-4789-AD9C-9E7819561E3E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{036520F0-E1E3-404C-B58E-BDD325CFA283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{036520F0-E1E3-404C-B58E-BDD325CFA283}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{036520F0-E1E3-404C-B58E-BDD325CFA283}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{036520F0-E1E3-404C-B58E-BDD325CFA283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2699C5AC-B8FD-4718-AAD6-31D86B48DF38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2699C5AC-B8FD-4718-AAD6-31D86B48DF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2699C5AC-B8FD-4718-AAD6-31D86B48DF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2699C5AC-B8FD-4718-AAD6-31D86B48DF38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9832DAA7-8922-4789-AD9C-9E7819561E3E} = {56B8DE9E-46C0-45B1-AB31-162527B5B385}
-		{036520F0-E1E3-404C-B58E-BDD325CFA283} = {CE795BA0-9BFC-4D5E-94C0-8D85A95C9302}
+		{2699C5AC-B8FD-4718-AAD6-31D86B48DF38} = {CE795BA0-9BFC-4D5E-94C0-8D85A95C9302}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8137FB11-34F7-4853-A29A-7F3FC7B86643}

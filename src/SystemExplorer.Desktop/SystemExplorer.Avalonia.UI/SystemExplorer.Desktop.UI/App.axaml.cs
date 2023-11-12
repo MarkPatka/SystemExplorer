@@ -1,11 +1,10 @@
 ﻿using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using Explorer.Shared.ViewModels;
-using SystemExplorer.Avalonia.UI.ViewModels;
-using SystemExplorer.Avalonia.UI.Views;
+using Explorer.Shared.ViewModels.BaseModels;
+using SystemExplorer.Desktop.UI.Views;
 
-namespace SystemExplorer.Avalonia.UI;
+namespace SystemExplorer.Desktop.UI;
 
 public partial class App : Application
 {
@@ -20,7 +19,7 @@ public partial class App : Application
         {
             desktop.MainWindow = new MainWindow
             {
-                DataContext = new BaseViewModel()
+                DataContext = new MainViewModel()
             };
         }
         base.OnFrameworkInitializationCompleted();

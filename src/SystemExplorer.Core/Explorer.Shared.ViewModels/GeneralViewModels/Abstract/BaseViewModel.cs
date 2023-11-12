@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Explorer.Shared.ViewModels;
+namespace Explorer.Shared.ViewModels.BaseModels.Abstract;
 
-public class BaseViewModel 
+public class BaseViewModel
     : INotifyPropertyChanged
 {
     #region Public Properties
