@@ -9,6 +9,7 @@ public class MainViewModel : BaseViewModel
 {
     #region Private Variables
     private string filePath = string.Empty;
+    private string name = string.Empty;
     private ObservableCollection<FileEntityViewModel> directories = new();
     private FileEntityViewModel selectedFile;
     #endregion
@@ -23,6 +24,15 @@ public class MainViewModel : BaseViewModel
             OnPropertyChanged();
         }
     }
+    public string Name
+    {
+        get => name;
+        set
+        {
+            Set(ref name, value);
+            OnPropertyChanged();
+        }
+    }
     public ObservableCollection<FileEntityViewModel> Directories
     {
         get => directories;
@@ -32,7 +42,6 @@ public class MainViewModel : BaseViewModel
             OnPropertyChanged();
         }
     }
-
     public FileEntityViewModel SelectedFile 
     { 
         get => selectedFile;
@@ -42,16 +51,16 @@ public class MainViewModel : BaseViewModel
             OnPropertyChanged();
         }
     }
-
     #endregion
 
     #region Ctor
     public MainViewModel()
     {
         FilePath = Environment.SystemDirectory;
+        Name = "This computer";
 
         foreach (var dir in Directory.GetLogicalDrives()) 
-            Directories.Add(new DirectoryViewModel(dir));
+            Directories.Add(new DirectoryViewModel(new DirectoryInfo(dir)));
     }
     #endregion
 
@@ -65,13 +74,25 @@ public class MainViewModel : BaseViewModel
         if (parameter is DirectoryViewModel directoryViewModel)
         {
             FilePath = directoryViewModel.FullName;
+            Name = directoryViewModel.Name;
 
             Directories.Clear();
 
             var dirInfo = new DirectoryInfo(FilePath);
-
-            foreach (var dir in dirInfo.GetDirectories())
-                Directories.Add(new DirectoryViewModel(dir));
+            try
+            {
+                foreach (var dir in dirInfo.GetDirectories())
+                {
+                    Directories.Add(new DirectoryViewModel(dir));
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex is UnauthorizedAccessException)
+                {
+                    throw new UnauthorizedAccessException("You don`t have rights to access this folder.");
+                }
+            }
 
             foreach (var file in dirInfo.GetFiles())
                 Directories.Add(new FileViewModel(file));

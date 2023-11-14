@@ -2,17 +2,17 @@
 
 public sealed class DirectoryViewModel : FileEntityViewModel
 {
-    public string FullName { get; set; }
+    public string Name { get; set; }
 
-    public DirectoryViewModel(string directoryName) 
-        : base(directoryName)
+    public DirectoryViewModel(string directoryName, string directoryFullName) 
+        : base(directoryFullName)
     {
-        FullName = directoryName;
+        Name = directoryName;
     }
 
     public DirectoryViewModel(DirectoryInfo directoryName)
         : base(directoryName.FullName)
     {
-        FullName = directoryName.FullName;
+        Name = directoryName.Name;
     }
 }

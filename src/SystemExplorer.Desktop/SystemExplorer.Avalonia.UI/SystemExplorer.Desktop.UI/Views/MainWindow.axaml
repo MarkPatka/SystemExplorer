@@ -9,32 +9,37 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="SystemExplorer">
 	<Grid>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="auto"/>
-			<RowDefinition/>
-		</Grid.RowDefinitions>
-		
-		<TextBlock Text="{Binding MainDirectory}" 
-				   Grid.Row="0"/>
+		<TabControl>
+			<TabItem Header="{Binding Name}">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="auto"/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
 
-		<ListBox ItemsSource="{Binding Directories}"
-				 SelectedItem="{Binding SelectedFile}"
-				 Grid.Row="1">
-			<Interaction.Behaviors>
-				<EventTriggerBehavior EventName="DoubleTapped">
-					<InvokeCommandAction Command="{Binding OpenCommand}"
-										 CommandParameter="{Binding SelectedFile}"/>
-				</EventTriggerBehavior>
-			</Interaction.Behaviors>
-			
-			<ListBox.ItemTemplate>
-				<DataTemplate>
-					<Grid Background="Transparent">
-						<TextBlock Text="{Binding Name}"/>
-					</Grid>
-				</DataTemplate>				
-			</ListBox.ItemTemplate>
-		</ListBox>
-		
+					<TextBlock Text="{Binding MainDirectory}"
+							   Grid.Row="0"/>
+
+					<ListBox ItemsSource="{Binding Directories}"
+							 SelectedItem="{Binding SelectedFile}"
+							 Grid.Row="1">
+						<Interaction.Behaviors>
+							<EventTriggerBehavior EventName="DoubleTapped">
+								<InvokeCommandAction Command="{Binding OpenCommand}"
+													 CommandParameter="{Binding SelectedFile}"/>
+							</EventTriggerBehavior>
+						</Interaction.Behaviors>
+
+						<ListBox.ItemTemplate>
+							<DataTemplate>
+								<Grid Background="Transparent">
+									<TextBlock Text="{Binding Name}"/>
+								</Grid>
+							</DataTemplate>
+						</ListBox.ItemTemplate>
+					</ListBox>
+				</Grid>
+			</TabItem>
+		</TabControl>	
 	</Grid>
 </Window>
