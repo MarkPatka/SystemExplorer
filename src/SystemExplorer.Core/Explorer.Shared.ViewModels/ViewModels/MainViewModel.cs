@@ -1,9 +1,9 @@
-﻿using Explorer.Shared.ViewModels.BaseModels.Abstract;
-using Explorer.Shared.ViewModels.Entities;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Input;
+using SystemExplorer.Shared.BaseModels.Abstract;
+using SystemExplorer.Shared.Entities;
 
-namespace Explorer.Shared.ViewModels.BaseModels;
+namespace SystemExplorer.Shared.BaseModels;
 
 public class MainViewModel : BaseViewModel
 {

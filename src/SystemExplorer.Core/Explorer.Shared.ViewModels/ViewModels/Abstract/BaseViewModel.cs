@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Explorer.Shared.ViewModels.BaseModels.Abstract;
+namespace SystemExplorer.Shared.BaseModels.Abstract;
 
 public class BaseViewModel
     : INotifyPropertyChanged

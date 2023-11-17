@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Explorer.Shared.ViewModels.Commands.Base;
+namespace SystemExplorer.Shared.Commands.Base;
 
 public static class CommandManager
 {

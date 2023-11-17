@@ -1,4 +1,4 @@
-﻿namespace Explorer.Shared.ViewModels.Entities;
+﻿namespace SystemExplorer.Shared.Entities;
 
 public sealed class FileViewModel : FileEntityViewModel
 {

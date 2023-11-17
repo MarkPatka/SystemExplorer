@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 
-namespace Explorer.Shared.ViewModels.Entities;
+namespace SystemExplorer.Shared.Entities;
 
 public class DelegateCommand : ICommand
 {

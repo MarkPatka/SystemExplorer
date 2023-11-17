@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+namespace SystemExplorer.Shared.Commands.Base;
 
-namespace Explorer.Shared.ViewModels.Commands.Base
+internal class LambdaCommand
 {
-    internal class LambdaCommand
-    {
-    }
 }

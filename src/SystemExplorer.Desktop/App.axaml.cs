@@ -1,8 +1,8 @@
 ﻿using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using Explorer.Shared.ViewModels.BaseModels;
 using SystemExplorer.Desktop.UI.Views;
+using SystemExplorer.Shared.BaseModels;
 
 namespace SystemExplorer.Desktop.UI;
 
